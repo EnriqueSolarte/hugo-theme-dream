@@ -32,7 +32,7 @@
   </div>
   {{ end }}
 
-  {{ $disqusShortname := (or site.Config.Services.Disqus.Shortname site.DisqusShortname) }}
+  {{ $disqusShortname := (or .Site.Config.Services.Disqus.Shortname .Site.Config.Services.Disqus.Shortname) }}
   {{ if and $disqusShortname .IsHome }}
   <div class="w-full md:w-1/2 p-4 dream-column">
     <article
