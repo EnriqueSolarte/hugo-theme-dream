@@ -32,8 +32,7 @@
   </div>
   {{ end }}
 
-  {{ $disqusShortname := (or .Site.Config.Services.Disqus.Shortname .Site.Config.Services.Disqus.Shortname) }}
-  {{ if and $disqusShortname .IsHome }}
+  {{ if and site.Config.Services.Disqus.Shortname .IsHome }}
   <div class="w-full md:w-1/2 p-4 dream-column">
     <article
       class="card card-compact bg-base-100 shadow-xl dark:border dark:border-base-content/30"
